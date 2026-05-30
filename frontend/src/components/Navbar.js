@@ -15,11 +15,13 @@ export default function Navbar() {
 
   return (
     <nav style={s.nav}>
-      <Link to="/" style={s.brand}>🪶 Quill</Link>
-      <div style={s.links}>
+      <div style={s.left}>
+        <Link to="/" style={s.brand}>🪶</Link>
         <button onClick={toggleTheme} style={s.themeBtn}>
           {theme === 'light' ? '🌙' : '☀️'}
         </button>
+      </div>
+      <div style={s.links}>
         {user ? (
           <>
             <Link to="/create" style={s.btn}>New Post</Link>
@@ -48,11 +50,20 @@ const styles = (theme) => ({
     top: 0,
     zIndex: 100,
   },
+  left: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.8rem',
+  },
   brand: {
-    fontSize: '1.3rem',
-    fontWeight: 'bold',
-    letterSpacing: '0.05em',
-    color: 'var(--brand)',
+    fontSize: '1.5rem',
+  },
+  themeBtn: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    fontSize: '1.1rem',
+    cursor: 'pointer',
+    padding: '0',
   },
   links: {
     display: 'flex',
@@ -73,12 +84,5 @@ const styles = (theme) => ({
     padding: '0.4rem 0.9rem',
     borderRadius: '4px',
     fontSize: '0.85rem',
-  },
-  themeBtn: {
-    backgroundColor: 'transparent',
-    border: '1px solid var(--border)',
-    borderRadius: '4px',
-    padding: '0.3rem 0.6rem',
-    fontSize: '0.9rem',
   },
 });
