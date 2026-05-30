@@ -14,28 +14,26 @@ export default function Navbar() {
   const s = styles(theme);
 
   return (
-    <nav style={s.nav}>
-      <div style={s.left}>
-        <Link to="/" style={s.brand}>🪶</Link>
-        <button onClick={toggleTheme} style={s.themeBtn}>
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
-      </div>
-      <div style={s.links}>
-        {user ? (
-          <>
-            <Link to="/create" style={s.btn}>New Post</Link>
-            <button onClick={handleLogout} style={s.ghost}>Logout</button>
-          </>
-        ) : (
-          <>
-            <Link to="/login" style={s.ghost}>Login</Link>
-            <Link to="/register" style={s.btn}>Register</Link>
-          </>
-        )}
-      </div>
-    </nav>
-  );
+  <nav style={s.nav}>
+    <Link to="/" style={s.brand}>🪶</Link>
+    <div style={s.links}>
+      {user ? (
+        <>
+          <Link to="/create" style={s.btn}>New Post</Link>
+          <button onClick={handleLogout} style={s.ghost}>Logout</button>
+        </>
+      ) : (
+        <>
+          <Link to="/login" style={s.ghost}>Login</Link>
+          <Link to="/register" style={s.btn}>Register</Link>
+        </>
+      )}
+      <button onClick={toggleTheme} style={s.themeBtn}>
+        {theme === 'light' ? '🌙' : '☀️'}
+      </button>
+    </div>
+  </nav>
+);
 }
 
 const styles = (theme) => ({
