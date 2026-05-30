@@ -22,7 +22,6 @@ export default function Navbar() {
         </button>
         {user ? (
           <>
-            <span style={s.welcome}>Hello, {user.name}</span>
             <Link to="/create" style={s.btn}>New Post</Link>
             <button onClick={handleLogout} style={s.ghost}>Logout</button>
           </>
@@ -42,7 +41,7 @@ const styles = (theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '1.2rem 3rem',
+    padding: '1rem 1.5rem',
     backgroundColor: 'var(--bg2)',
     borderBottom: '1px solid var(--border)',
     position: 'sticky',
@@ -50,7 +49,7 @@ const styles = (theme) => ({
     zIndex: 100,
   },
   brand: {
-    fontSize: '1.4rem',
+    fontSize: '1.3rem',
     fontWeight: 'bold',
     letterSpacing: '0.05em',
     color: 'var(--brand)',
@@ -58,32 +57,28 @@ const styles = (theme) => ({
   links: {
     display: 'flex',
     alignItems: 'center',
-    gap: '1rem',
-  },
-  welcome: {
-    fontSize: '0.9rem',
-    color: 'var(--muted)',
+    gap: '0.6rem',
   },
   btn: {
     backgroundColor: 'var(--brand)',
     color: 'var(--btnText)',
-    padding: '0.5rem 1.2rem',
+    padding: '0.4rem 0.9rem',
     borderRadius: '4px',
-    fontSize: '0.9rem',
+    fontSize: '0.85rem',
   },
   ghost: {
     backgroundColor: 'transparent',
     border: '1px solid var(--brand)',
     color: 'var(--brand)',
-    padding: '0.5rem 1.2rem',
+    padding: '0.4rem 0.9rem',
     borderRadius: '4px',
-    fontSize: '0.9rem',
+    fontSize: '0.85rem',
   },
   themeBtn: {
     backgroundColor: 'transparent',
     border: '1px solid var(--border)',
     borderRadius: '4px',
-    padding: '0.4rem 0.7rem',
-    fontSize: '1rem',
+    padding: '0.3rem 0.6rem',
+    fontSize: '0.9rem',
   },
 });
