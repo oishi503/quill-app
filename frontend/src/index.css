@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  --bg: #f5f0e8;
+  --bg2: #ede8dc;
+  --border: #d6cfc2;
+  --text: #2c2c2c;
+  --text2: #5c5347;
+  --muted: #9c8f7e;
+  --brand: #3b3228;
+  --btnText: #f5f0e8;
+}
+
+body.dark {
+  --bg: #1a1814;
+  --bg2: #242019;
+  --border: #3a3528;
+  --text: #e8e0d0;
+  --text2: #b5a990;
+  --muted: #7a6f5e;
+  --brand: #e8e0d0;
+  --btnText: #1a1814;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+input, textarea {
+  font-family: 'Georgia', serif;
+}
