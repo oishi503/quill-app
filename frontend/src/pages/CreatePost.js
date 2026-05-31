@@ -101,8 +101,8 @@ const styles = {
   },
   actions: {
     display: 'flex',
-    gap: '1rem',
-    justifyContent: 'flex-end',
+    flexDirection: 'column',
+    gap: '0.8rem',
     marginTop: '0.5rem',
   },
   btn: {
